@@ -1,0 +1,929 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+@font-face {
+	font-family: 'New York';
+	src: url("/fonts/NewYork.ttf") format('truetype');
+}
+@font-face {
+	font-family: 'New York Bold';
+	src: url("/fonts/NewYork.ttf") format('truetype');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'SF Compact';
+	src: url("/fonts/SF-Compact.ttf") format('truetype');
+}
+
+@font-face {
+	font-family: 'SF Compact Bold';
+	src: url("/fonts/SF-Compact.ttf") format('truetype');
+	font-weight: bold;
+}
+
+/* Hacemos que el scroll sea suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hacemos que no haya bordes en la página principal */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+li, a, button {
+	font-family: "SF Compact";
+	font-style: normal;
+	line-height: 24px;
+	font-weight: 400;
+	font-size: 17px;
+	color: #000000;
+	text-decoration: none;
+}
+
+/* ************* INDEX HTML ************* */
+
+header {
+	display: flex;
+	justify-content: center;
+	padding: 5px 10%;
+	background-color: #FFFF;
+	border-bottom: 1px #CFCFCF solid;
+	/* box-shadow: 1px 1px 20px #CFCFCF; */
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%; /* Full width */
+	padding-top: 12px;
+	height: 11vh;
+
+	z-index: 100;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.header__section_1 {
+	/* background-color: black; */
+	width: 20%;
+	height: 100%;
+}
+.header__section_2 {
+	/* background-color: red; */
+	width: 70%;
+	height: 100%;
+	padding-top: 20px;
+}
+.header__section_3 {
+	/* background-color: blue; */
+	padding-left: 20px;
+	width: 15%;
+	height: 100%;
+	padding-top: 18px;
+}
+
+.header__section_4 {
+	/* background-color: yellow; */
+	padding-left: 55px;
+	width: 10%;
+	height: 100%;
+	padding-top: 15px;
+}
+
+.logo {
+	cursor: pointer;
+	width: 25%;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 25px;
+	font-size: 1rem;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: #DBB87B;
+}
+
+.container button {
+	background-color: rgba(236,236,236, 1);
+	border: none;
+	transition: all 0.3s ease 0s;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	color: grey;
+}
+
+.header__section_3 input {
+	padding: 2px 10px;
+	width: 100%;
+	border: none;
+	background-color: rgba(236,236,236, 1);
+	border-radius: 60px; 
+}
+
+.header__section_3 input:hover {
+	background-color: rgba(236,236,236, 0.8);
+}
+
+.header__section_3 input[type="search"]:focus {
+	outline : none;
+}
+
+.header__section_3 input,
+input::placeholder {
+	font-size: 0.9rem;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-style: normal;
+	line-height: 24px;
+	font-weight: 300;
+	padding-left: 10px;	
+}
+
+/* Añadimos icono arrow */
+.tour__button-back p:before {
+	content: "";
+	display: block;
+	background: url("/images/arrow-left-solid.svg") no-repeat;
+	width: 12px;
+	height: 12px;
+	float: left;
+	margin: 6px 6px 0 0;
+	color: #000000;
+}
+
+.header__section_4 button {
+	color: #FFFF;	
+	padding: 5px 40px;
+	background-color: black;
+	border: none;
+	border-radius: 50px;
+	transition: all 0.3s ease 0s;
+	margin-left: -20px;
+}
+
+.header__section_4 button:hover {
+	background-color: #DBB87B;
+	color: black;
+}
+
+/************* INDEX__HERO-HTML *************/
+
+.hero__container {
+	width: 100%;
+	height: 100%;
+  height: 72vh;
+	position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main__text_1 h1 {
+	order: 1;
+	position: absolute;
+	width: 479px;
+	height: 119px;
+	left: 150px;
+	top: 250px;
+
+	font-family: 'New York';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 90px;
+	line-height: 119px;
+
+	color: #000000;
+
+	z-index: 1;
+}
+
+.main__img img {
+	order: 2;
+	position: absolute;
+	width: 599px;
+	height: 600px;
+	left: 430px;
+	top: 10px;
+
+	z-index: 0;
+}
+
+.main__text_2 h1 {
+	order: 3;
+	position: absolute;
+	width: 507px;
+	height: 119px;
+	left: 880px;
+	top: 250px;
+
+	font-family: 'New York';
+	font-style: normal;
+	font-weight: 200;
+	font-size: 90px;
+	line-height: 119px;
+
+	color: #000000;
+
+	z-index: 1;
+}
+
+.main__text_2 img {
+	order: 4;
+	position: absolute;
+	width: 246px;
+	height: 147px;
+	left: 1085px;
+	top: 350px;
+}
+
+/* ************* TOUR HTML ************* */
+
+.tour__hero-container {
+	width: 100%;
+	height: 28vh;
+	margin-top: 77px;
+	
+	background: linear-gradient(180deg, #C1A26B 0%, rgba(193, 162, 107, 0) 100%);
+	border-bottom: 1px #CFCFCF solid;
+}
+
+.tour__button-back i {
+	position: absolute;
+	left: 10.98%;
+	right: 88.1%;
+	top: 12.24%;
+	bottom: 86.89%;
+}
+
+.tour__button-back p {
+	padding: 40px 0px 0px 143px; 
+	font-family: 'SF Compact';
+	font-style: normal;
+	font-weight: 556;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.tour__hero-text h1 {
+	padding: 30px 0px 0px 140px; 
+	font-family: 'New York';
+	font-style: normal;
+	font-weight: 496;
+	font-size: 60px;
+	line-height: 72px;
+
+	color: #000000;
+}
+
+.tour__europe-container {
+	width: 100%;
+	height: 100vh;
+	/* background-color: grey; */
+}
+
+.tour__europe-inner_container {
+	width: 83%;
+	height: 100vh;
+	margin: 20px 142px 0px 142px;
+	background-color: #FFFF;
+}
+
+.tour__europe-text h2 {
+	font-family: 'New York';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 48px;
+	margin-bottom: 50px;
+}
+
+.tour__squares {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0px 0px 10px 0px;
+	
+	/* background-color: red; */
+}
+
+.tour__squares-stockholm {
+	order: 1;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-stockholm img {
+	width: 350px;
+	height: 170px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-stockholm h3 {
+	position: absolute;
+	width: 260px;
+	height: 108px;
+	left: 187px;
+	top: 455px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 790;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-stockholm h4 {
+	position: absolute;
+	left: 235px;
+	top: 600px;
+	width: 158px;
+	height: 24px;
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-stockholm button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 233px;
+	top: 640px;
+	cursor: pointer;
+	font-family: 'SF Compact Bold';
+
+	background: #FFFFFF;
+	border: none;
+	border-radius: 20px;
+}
+
+.tour__squares-stockholm button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+.tour__squares-oslo {
+	order: 2;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-oslo img {
+	position: absolute;
+	width: 350px;
+	height: 170px;
+	left: 565px;
+	height: 170px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-oslo h3 {
+	position: absolute;
+	width: 180px;
+	height: 108px;
+	left: 652px;
+	top: 455px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 790;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-oslo h4 {
+	position: absolute;
+	width: 158px;
+	height: 24px;
+	left: 662px;
+	top: 600px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-oslo button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 662px;
+	top: 640px;
+	font-family: 'SF Compact Bold';
+
+	border: none;
+	background: #FFFFFF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.tour__squares-oslo button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+.tour__squares-copenhagen {
+	order: 3;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-copenhagen img {
+	position: absolute;
+	width: 350px;
+	height: 170px;
+	left: 987px;
+	height: 170px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-copenhagen h3 {
+	position: absolute;
+	width: 286px;
+	height: 108px;
+	left: 1020px;
+	top: 455px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 790;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-copenhagen h4 {
+	position: absolute;
+	width: 158px;
+	height: 24px;
+	left: 1085px;
+	top: 600px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-copenhagen button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 1085px;
+	top: 640px;
+	font-family: 'SF Compact Bold';
+
+	border: none;
+	background: #FFFFFF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.tour__squares-copenhagen button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+.tour__squares-budapest {
+	order: 4;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-budapest img {
+	position: absolute;
+	width: 350px;
+	height: 170px;
+	left: 142px;
+	top: 728px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-budapest h3 {
+	position: absolute;
+	width: 260px;
+	height: 108px;
+	left: 187px;
+	top: 770px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-budapest h4 {
+	position: absolute;
+	left: 235px;
+	top: 915px;
+	width: 158px;
+	height: 24px;
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-budapest button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 233px;
+	top: 955px;
+	font-family: 'SF Compact Bold';
+	cursor: pointer;
+
+	background: #FFFFFF;
+	border: none;
+	border-radius: 20px;
+}
+
+.tour__squares-budapest button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+.tour__squares-zagreb {
+	order: 5;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-zagreb img {
+	position: absolute;
+	width: 350px;
+	height: 170px;
+	left: 565px;
+	top: 728px;
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-zagreb h3 {
+	position: absolute;
+	width: 180px;
+	height: 108px;
+	left: 655px;
+	top: 770px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 790;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-zagreb h4 {
+	position: absolute;
+	width: 158px;
+	height: 24px;
+	left: 660px;
+	top: 915px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-zagreb button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 660px;
+	top: 955px;
+	font-family: 'SF Compact Bold';
+
+	border: none;
+	background: #FFFFFF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.tour__squares-zagreb button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+.tour__squares-belgrade {
+	order: 6;
+	width: 350px;
+	height: 284px;
+
+	background: #DBB87B;
+	border-radius: 20px;
+	margin: 10px 0px 30px 0px;
+}
+
+.tour__squares-belgrade img {
+	position: absolute;
+	width: 350px;
+	height: 170px;
+	left: 987px;
+	top: 728px;
+
+	border-radius: 20px 20px 0px 0px;
+}
+
+.tour__squares-belgrade h3 {
+	position: absolute;
+	width: 180px;
+	height: 108px;
+	left: 1060px;
+	top: 770px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 790;
+	font-size: 45px;
+	line-height: 54px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-belgrade h4 {
+	position: absolute;
+	width: 158px;
+	height: 24px;
+	left: 1085px;
+	top: 915px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #FFFFFF;
+}
+
+.tour__squares-belgrade button {
+	position: absolute;
+	width: 155px;
+	height: 38px;
+	left: 1080px;
+	top: 955px;
+	font-family: 'SF Compact Bold';
+
+	border: none;
+	background: #FFFFFF;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.tour__squares-belgrade button:hover {
+	transition: all 0.3s ease 0s;
+	color: #FFFF;
+	background: #000000;
+}
+
+/* ************* BOOKS HTML ************* */
+
+.tour__books-container {
+	width: 100%;
+	height: 90vh;
+	margin-top: 77px;
+	
+	background: linear-gradient(180deg, #C1A26B 0%, rgba(193, 162, 107, 0) 100%);
+	z-index: 1;
+}
+
+/* Primer box */
+.tour__books-inner_container {
+	width: 84%;
+	height: 85vh;
+	margin: -620px 140px 0px 140px;
+	/* background-color: grey; */
+	z-index: 200;
+}
+
+.tour__books-box {
+	width: 84%;
+	margin: 0px 30px 0px 30px;
+	height: 621px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tour__books-img img {
+	width: 412px;
+	height: 621px;
+}
+
+.tour__books-text_box h1 {
+	width: 732px;
+	height: 119px;
+	padding: 200px 0px 0px 50px;
+
+	font-family: 'SF Compact Bold';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 119px;
+
+	color: #000000;
+}
+
+.tour__books-text_box p:first-of-type {
+	width: 656px;
+	height: 48px;
+	padding: 130px 0px 0px 50px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 350;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #000000;
+}
+
+.tour__books-text_box p {
+	width: 656px;
+	height: 48px;
+	padding: 55px 0px 0px 50px;
+
+	font-family: 'SF Compact';
+	font-style: italic;
+	font-weight: 100;
+	font-size: 20px;
+	line-height: 24px;
+
+	color: #000000;
+}
+
+/* Segundo Box */
+.tour__books-inner_container_2 {
+	width: 84%;
+	height: 85vh;
+	margin: 0px 140px 0px 140px;
+	/* background-color: red; */
+	z-index: 200;
+}
+
+.tour__books-box_2 {
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	justify-content: space-between;
+	/* background-color: blue; */
+}
+
+.tour__books-img_2 {
+	width: 40%;
+	/* background-color: green; */
+}
+
+.tour__books-img_2 img {
+	width: 600px;
+	height: 600px;
+	margin-left: -80px;
+}
+
+.tour__books-text_box_2 {
+	margin: 60px 0px 30px 0px;
+	width: 60%;
+	height: 25%;
+	/* background: brown; */
+}
+
+.tour__books-text_box_2_1 h2 {
+	font-family: 'New York';
+	font-style: normal;
+	font-weight: 496;
+	font-size: 35px;
+	line-height: 42px;
+
+	color: #000000;
+}
+
+.tour__books-text_box_2_1 p {
+	margin-top: 10px;
+	font-family: 'SF Compact';
+	font-style: normal;
+	font-weight: 350;
+	font-size: 1rem;
+	line-height: 24px;
+
+	color: #000000;
+}
+
+.tour__books-text_box_2_2 {
+	margin-top: 50px;
+	width: 100%;
+	/* background: purple; */
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.tour__books-text_box_2_2 img {
+	width: 30%;
+	margin-bottom: 5px;
+}
+
+.tour__books-text_box_2_2 p:first-of-type {
+	margin-bottom: 5px;
+	font-family: 'SF Compact';
+	font-style: normal;
+	font-weight: 350;
+	font-size: 14px;
+	line-height: 18px;
+
+	color: #000000;
+}
+
+.tour__books-text_box_2_2 p {
+	font-family: 'New York Bold';
+	font-style: italic;
+	font-weight: 496;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: 30px;
+
+	color: #000000;
+}
+
+.tour__books-text_box_2_2_1 {
+	width: 48%;
+	/* background-color: orange; */
+}
+
+
+
+
+
